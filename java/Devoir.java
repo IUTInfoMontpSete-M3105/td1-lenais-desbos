@@ -14,4 +14,14 @@ public class Devoir {
         this.nbPoint = nbPoint;
     }
 
+    @Override
+    public String toString() {
+        return "Devoir{" +
+                "nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", deadline=" + deadline +
+                ", nbPoint=" + nbPoint +
+                '}';
+    }
+
 }

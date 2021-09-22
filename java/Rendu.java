@@ -28,4 +28,13 @@ public class Rendu {
         this.note = note;
     }
 
+    @Override
+    public String toString() {
+        return "Rendu{" +
+                "document='" + document + '\'' +
+                ", date=" + date +
+                ", note=" + note +
+                '}';
+    }
+
 }

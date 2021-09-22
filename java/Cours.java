@@ -24,4 +24,10 @@ public class Cours {
 
     }
 
+    @Override
+    public String toString() {
+        return "Cours de " + nom +
+                " du semestre " + semestre +
+                '.';
+    }
 }

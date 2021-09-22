@@ -12,4 +12,14 @@ public abstract class Utilisateur {
         this.mail = mail;
     }
 
+    @Override
+    public String toString() {
+        return "Utilisateur{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", mail='" + mail + '\'' +
+                '}';
+    }
+
 }

@@ -4,17 +4,18 @@ public class Administrateur extends Utilisateur{
         super(nom, prenom, adresse, mail);
     }
 
-    public void creerCours(Enseignant cdc, String matiere, int semestre){
+    public Cours creerCours(Enseignant cdc, String matiere, int semestre){
         Cours cours = new Cours(matiere,semestre);
         cdc.setCDC(cdc,matiere);
+        return cours;
     }
 
     public void supprimerCours(Cours cours){
 
     }
 
-    public void supprimerAffectation(){
-
+    public void supprimerAffectation(Enseignant cdc){
+        cdc.removeCDC(cdc);
     }
 
 }

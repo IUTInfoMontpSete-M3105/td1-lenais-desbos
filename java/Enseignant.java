@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Enseignant extends Utilisateur{
 
     private String numen;
@@ -13,12 +15,12 @@ public class Enseignant extends Utilisateur{
         this.CDC=null;
     }
 
-    public void creerDevoir(){
-
+    public void creerDevoir(String nom, String description, Date deadline, int nbPts){
+        new Devoir(nom, description, deadline, nbPts);
     }
 
-    public void saisirNote(){
-
+    public void saisirNote(Rendu rendu, int note){
+        rendu.setNote(note);
     }
 
     public boolean isCDC() {
@@ -35,4 +37,16 @@ public class Enseignant extends Utilisateur{
         ens.CDC=null;
     }
 
+    @Override
+    public String toString() {
+        String res = "Enseignant{" +
+                "numen='" + numen + '\'' +
+                ", harpege='" + harpege + '\'' +
+                ", isCDC=" + isCDC;
+        if (isCDC){
+            res = res + ", CDC de='" + CDC + '\'';
+        }
+        res = res + '}';
+        return res;
+    }
 }
